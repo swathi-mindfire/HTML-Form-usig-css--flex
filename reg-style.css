@@ -5,6 +5,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+@media(max-width:670px){
+    .image{
+        width:1px;
+        display:none;
+    }
+    .container{
+        
+        padding-left: 200px;
+        height: 100%;
+        padding-top: 30px;
+        width:100%;     
+    }
+    .Registration-box{
+        width:100vw;
+    }
+}
+@media(max-width:400px){
+    h2{
+        font-size: 18px;
+
+    }
+    .container{
+        width:100vw;
+        padding:20px;
+    }
+    .Registration-box{
+        width:100%;
+    }
+
+}
 
 html,body{
     height: 100%;
@@ -13,11 +43,14 @@ html,body{
     font-family:"Inconsolata",monospace;
     display:flex;
     justify-content: center;
+    background-color: #141313;
     
 }
 .container{
     width:700px;
     display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .image{
     width: 50%;
@@ -32,6 +65,7 @@ html,body{
     flex-direction: column;
     justify-content: space-evenly;
     width:50%;
+    background-color: #2e2e2e;
 
 }
 
@@ -41,6 +75,8 @@ html,body{
 h2{
     margin-bottom: 50px;
     font-weight: 800;
+    color:white;
+
 
 }
 .fields{
@@ -50,12 +86,15 @@ h2{
     overflow:hidden;
 }
 
-input[type="text"],input[type="password"]{
+input[type="text"],input[type="password"],input[type="email"]{
     border:none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     padding: 5px;
     outline: none;
+    color: white;
     width:220px;
+    background: none;
+    
 }
 label{
     position:absolute;
@@ -63,6 +102,7 @@ label{
     left: 0;
     padding-left: 45px;
     pointer-events: none;
+    color:white;
     
 }
 .fas{
@@ -70,9 +110,11 @@ label{
     top: 0;
     left: 0;
     pointer-events: none;
+    color:white;
     
 }
-input[type="text"]:focus ~label,input[type="password"]:focus ~label{
+input[type="text"]:focus ~label,input[type="password"]:focus ~label,input[type="email"]:focus ~label,
+input[type="text"]:valid ~label,input[type="password"]:valid ~label,input[type="email"]:valid ~label{
    display: none;
 }
 input[type="submit"]{
